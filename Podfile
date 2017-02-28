@@ -15,7 +15,6 @@ target 'Reddit Reader' do
   pod 'Swinject'
   pod 'SnapKit'
   pod 'Then'
-  pod 'IQKeyboardManagerSwift'
   pod 'SwiftyHelpers'
   pod 'NSDate+TimeAgo'
   pod 'TOWebViewController'

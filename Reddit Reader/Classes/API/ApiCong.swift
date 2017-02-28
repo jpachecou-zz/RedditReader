@@ -8,7 +8,6 @@
 
 import Foundation
 import UIKit
-import IQKeyboardManagerSwift
 
 struct ApiCong {
     
@@ -35,7 +34,6 @@ struct ApiCong {
     }
     
     static func appearanceConfig() {
-        IQKeyboardManager.sharedManager().enable = true
         
         UINavigationBar.appearance().do {
             $0.titleTextAttributes = [

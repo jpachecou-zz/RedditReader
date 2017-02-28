@@ -29,6 +29,6 @@ $ pod install
 
 - [x] 3D Touch support, Peek and pop enabled
 - [x] Portrait and Landscape
-
-## Thrid Parties libraries
-
+- [x] Dependencies injection
+- [x] Rx custom utils
+- [x] Slash animation
