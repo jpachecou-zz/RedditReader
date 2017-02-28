@@ -43,7 +43,7 @@
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redditIconSurprise" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-85-ap3">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="redditIcon" translatesAutoresizingMaskIntoConstraints="NO" id="C2t-85-ap3">
                             <rect key="frame" x="138" y="247" width="100" height="140"/>
                         </imageView>
                     </subviews>
@@ -74,6 +74,6 @@
         </view>
     </objects>
     <resources>
-        <image name="redditIconSurprise" width="100" height="140"/>
+        <image name="redditIcon" width="100" height="140"/>
     </resources>
 </document>

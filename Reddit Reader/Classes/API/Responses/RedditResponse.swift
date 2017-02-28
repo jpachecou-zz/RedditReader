@@ -9,8 +9,9 @@
 import Foundation
 import ObjectMapper
 import NSDate_TimeAgo
+import Then
 
-struct RedditResponse: Mappable {
+struct RedditResponse: Mappable, Then {
 
     var posts: [RedditPost] = []
     
@@ -22,7 +23,7 @@ struct RedditResponse: Mappable {
     }
 }
 
-struct RedditPost: Mappable {
+struct RedditPost: Mappable, Then {
     
     var title = ""
     var thumbnail = ""
@@ -32,6 +33,8 @@ struct RedditPost: Mappable {
     var score = 0
     var subreddit = ""
     var url = ""
+    var position = 0
+    var selftext = ""
     
     var timeAgo: String {
         return NSDate(timeIntervalSince1970: created).timeAgo()
@@ -49,5 +52,6 @@ struct RedditPost: Mappable {
         score <- map["data.score"]
         subreddit <- map["data.subreddit"]
         url <- map["data.url"]
+        selftext <- map["data.selftext_html"]
     }
 }

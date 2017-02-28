@@ -10,6 +10,7 @@
 		2DECFC9B4CECAB628DDFD13D /* Pods_Reddit_Reader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CBF738C87DE69E080FAF7FB /* Pods_Reddit_Reader.framework */; };
 		87BB51B18900DF27173810A3 /* Pods_Reddit_ReaderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 759A146EE7A81A06BD4014C3 /* Pods_Reddit_ReaderTests.framework */; };
 		E81001361E5D2119001B980C /* RedditResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81001351E5D2119001B980C /* RedditResponse.swift */; };
+		E86F60391E64E5C30096C991 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E86F60381E64E5C30096C991 /* HomeViewModel.swift */; };
 		E87FA8251E60B0FC00E1D8E3 /* UIImageView+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E87FA8241E60B0FC00E1D8E3 /* UIImageView+Utils.swift */; };
 		E88040611E61F94400A60E7A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E880405F1E61F94400A60E7A /* SplashViewController.swift */; };
 		E88040621E61F94400A60E7A /* SplashViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E88040601E61F94400A60E7A /* SplashViewController.xib */; };
@@ -27,7 +28,6 @@
 		E8D2FCB81E5D1861009FA359 /* OperationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC901E5D1861009FA359 /* OperationManager.swift */; };
 		E8D2FCB91E5D1861009FA359 /* UIOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC911E5D1861009FA359 /* UIOperation.swift */; };
 		E8D2FCBA1E5D1861009FA359 /* DI.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC931E5D1861009FA359 /* DI.swift */; };
-		E8D2FCBB1E5D1861009FA359 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC941E5D1861009FA359 /* Errors.swift */; };
 		E8D2FCBD1E5D1861009FA359 /* Rx+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC971E5D1861009FA359 /* Rx+Utils.swift */; };
 		E8D2FCC01E5D1861009FA359 /* UIColor+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC9A1E5D1861009FA359 /* UIColor+Utils.swift */; };
 		E8D2FCC41E5D1861009FA359 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8D2FC9F1E5D1861009FA359 /* BaseViewController.swift */; };
@@ -57,6 +57,7 @@
 		8CBF738C87DE69E080FAF7FB /* Pods_Reddit_Reader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Reddit_Reader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A59856DE09FA0708B09EB60 /* Pods-Reddit Reader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Reddit Reader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Reddit Reader/Pods-Reddit Reader.debug.xcconfig"; sourceTree = "<group>"; };
 		E81001351E5D2119001B980C /* RedditResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RedditResponse.swift; sourceTree = "<group>"; };
+		E86F60381E64E5C30096C991 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E87FA8241E60B0FC00E1D8E3 /* UIImageView+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Utils.swift"; sourceTree = "<group>"; };
 		E880405F1E61F94400A60E7A /* SplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		E88040601E61F94400A60E7A /* SplashViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SplashViewController.xib; sourceTree = "<group>"; };
@@ -78,7 +79,6 @@
 		E8D2FC901E5D1861009FA359 /* OperationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OperationManager.swift; sourceTree = "<group>"; };
 		E8D2FC911E5D1861009FA359 /* UIOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIOperation.swift; sourceTree = "<group>"; };
 		E8D2FC931E5D1861009FA359 /* DI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DI.swift; sourceTree = "<group>"; };
-		E8D2FC941E5D1861009FA359 /* Errors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
 		E8D2FC971E5D1861009FA359 /* Rx+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Rx+Utils.swift"; sourceTree = "<group>"; };
 		E8D2FC9A1E5D1861009FA359 /* UIColor+Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Utils.swift"; sourceTree = "<group>"; };
 		E8D2FC9F1E5D1861009FA359 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -248,7 +248,6 @@
 			isa = PBXGroup;
 			children = (
 				E8D2FC931E5D1861009FA359 /* DI.swift */,
-				E8D2FC941E5D1861009FA359 /* Errors.swift */,
 				E8D2FC951E5D1861009FA359 /* Extensions */,
 				E8D2FC9E1E5D1861009FA359 /* Subclasses */,
 			);
@@ -298,6 +297,7 @@
 			isa = PBXGroup;
 			children = (
 				E8D2FD081E5D1E6F009FA359 /* Home+DI.swift */,
+				E86F60381E64E5C30096C991 /* HomeViewModel.swift */,
 				E8D2FD031E5D1C89009FA359 /* View */,
 			);
 			path = Home;
@@ -546,12 +546,12 @@
 				E8D2FCA41E5D1861009FA359 /* API.swift in Sources */,
 				E8D2FCA31E5D1861009FA359 /* ApiCong.swift in Sources */,
 				E8D2FD091E5D1E6F009FA359 /* Home+DI.swift in Sources */,
-				E8D2FCBB1E5D1861009FA359 /* Errors.swift in Sources */,
 				E88040611E61F94400A60E7A /* SplashViewController.swift in Sources */,
 				E88040641E61F95500A60E7A /* Splash+DI.swift in Sources */,
 				E8D2FCFF1E5D1A7E009FA359 /* R.generated.swift in Sources */,
 				E8D2FCB71E5D1861009FA359 /* Operation.swift in Sources */,
 				E8D2FCBD1E5D1861009FA359 /* Rx+Utils.swift in Sources */,
+				E86F60391E64E5C30096C991 /* HomeViewModel.swift in Sources */,
 				E8D2FCB81E5D1861009FA359 /* OperationManager.swift in Sources */,
 				E81001361E5D2119001B980C /* RedditResponse.swift in Sources */,
 				E87FA8251E60B0FC00E1D8E3 /* UIImageView+Utils.swift in Sources */,

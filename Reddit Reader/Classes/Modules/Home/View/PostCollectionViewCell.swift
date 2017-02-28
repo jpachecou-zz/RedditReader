@@ -15,6 +15,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     @IBOutlet private weak var titleLabel:              UILabel!
     @IBOutlet private weak var authorLabel:             UILabel!
     @IBOutlet private weak var positionLabel:           UILabel!
+    @IBOutlet private weak var subredditLabel:          UILabel!
     @IBOutlet private weak var scoreLabel:              UILabel!
     @IBOutlet private weak var timeAgoLabel:            UILabel!
     @IBOutlet private weak var commentsLabel:           UILabel!
@@ -26,21 +27,29 @@ class PostCollectionViewCell: UICollectionViewCell {
     
     var disposables: RxDisposableReusable!
     var post: RedditPost?
-    var position = 1 {
-        didSet {
-            positionLabel.text = "\(position)"
-        }
-    }
+    var isFirst = false
     
     override func awakeFromNib() {
         super.awakeFromNib()
         disposables = RxDisposableReusable(disposeBag)
         titleLabel.preferredMaxLayoutWidth = 280.0
+        
+        NotificationCenter.default.rx
+            .notification(.UIDeviceOrientationDidChange)
+            .subscribe(onNext: { [weak self] _ in
+                guard let welf = self else { return }
+                if UIApplication.shared.statusBarOrientation == .portrait {
+                    welf.topCornerRound(radius: 22.0)
+                } else {
+                    welf.layer.mask =  nil
+                }
+            })
+            .addDisposableTo(disposeBag)
     }
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        if position == 1 {
+        if isFirst && UIDevice.current.orientation == .portrait {
             topCornerRound(radius: 22.0)
         }
     }
@@ -52,12 +61,13 @@ class PostCollectionViewCell: UICollectionViewCell {
             NSUnderlineStyleAttributeName: NSUnderlineStyle.styleSingle.rawValue
         ])
         scoreLabel.text = "\(post.score)"
-        positionLabel.text = "\(position)"
+        positionLabel.text = "\(post.position + 1)"
         timeAgoLabel.text = post.timeAgo
+        subredditLabel.text = post.subreddit
         commentsLabel.text = "\(post.numComments)"
         imageView.load(urlString: post.thumbnail)
-            .subscribe(onCompleted: {
-                self.activityIndicatorView.stopAnimating()
+            .subscribe(onCompleted: { [weak self] in
+                self?.activityIndicatorView.stopAnimating()
             })
             .addDisposableTo(disposeBag)
     }
@@ -65,6 +75,7 @@ class PostCollectionViewCell: UICollectionViewCell {
     override func prepareForReuse() {
         super.prepareForReuse()
         layer.mask = nil
+        isFirst = false
         imageView.image == nil ?
             activityIndicatorView.startAnimating() :
             activityIndicatorView.stopAnimating()

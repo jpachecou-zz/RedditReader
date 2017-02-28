@@ -19,8 +19,12 @@ extension DI {
         
         private static func registerDependecies() -> Container {
             return Container {
-                $0.register(HomeViewController.self) { _ in
-                    HomeViewController()
+                $0.register(HomeViewModel.self) { _ in
+                    HomeViewModel(apiPosts: API.posts())
+                }
+                $0.register(HomeViewController.self) { r in
+                    let viewModel = r.resolve(HomeViewModel.self)!
+                    return HomeViewController(viewModel: viewModel)
                 }
             }
         }

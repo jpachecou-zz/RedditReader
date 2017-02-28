@@ -18,7 +18,6 @@ target 'Reddit Reader' do
   pod 'IQKeyboardManagerSwift'
   pod 'SwiftyHelpers'
   pod 'NSDate+TimeAgo'
-  pod 'lottie-ios'
   pod 'TOWebViewController'
 
   target 'Reddit ReaderTests' do
